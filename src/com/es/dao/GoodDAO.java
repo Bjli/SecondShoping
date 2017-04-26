@@ -125,7 +125,6 @@ System.out.println(sql);
 			return 0;
 		String sql = "select count(*) from good_category where category_id="+categories.get(0).getId()+
 				" or floor(good_category.category_id / 10)="+ categories.get(0).getId() +";";
-System.out.println(sql);
 		Connection conn = DB.createConn();
 		Statement stmt = DB.getStatement(conn);
 		ResultSet rs = null;
