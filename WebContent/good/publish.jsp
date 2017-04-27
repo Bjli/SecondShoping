@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html;charset=GB18030" pageEncoding="GB18030"%>
+<%@ page language="java" contentType="text/html;charset=utf-8" pageEncoding="utf-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -11,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>����������Ϣ</title>
+	<title>发布二手信息</title>
 	<link rel="stylesheet" href="..\static\css\bootstrap.min.css">
 	<script src="..\static\js\jquery-1.11.2.js"></script>
 	<script src="..\static\js\bootstrap.min.js"></script>
@@ -77,65 +77,65 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 <body>
 	<div class="container">
-		<form action="publish" class="form-horizontal" name="form1" method="post" enctype="multipart/form-data">
+		<form action="<%=basePath%>good/publish" class="form-horizontal" name="form1" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="user.id" value="1"/>
-			<h2>��Ʒ��Ϣ</h2>
+			<h2>商品信息</h2>
 			<div class="form-group">
-				<label for="name" class="control-label col-sm-2">����</label>
+				<label for="name" class="control-label col-sm-2">名称</label>
 				<div class="col-sm-10">
-					<input type="text"  name= "name" class="form-control" placeholder="ǡ�������ָ��ܱ�������" required autofocus>
+					<input type="text"  name= "name" class="form-control" placeholder="恰当的名字更能被检索到" required autofocus>
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="abstract" class="control-label col-sm-2">���</label>
+				<label for="abstract" class="control-label col-sm-2">简介</label>
 				<div class="col-sm-10">
-					<textarea name="detail" id="abstract" cols="30" rows="4" class="form-control" placeholder="��Ҫ����һ�������¾ɳ̶Ȱ�"required></textarea>
+					<textarea name="detail" id="abstract" cols="30" rows="4" class="form-control" placeholder="简要介绍一下它的新旧程度吧"required></textarea>
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="price" class="control-label col-sm-2">�۸�</label>
+				<label for="price" class="control-label col-sm-2">价格</label>
 				<div class="input-group col-sm-10" >
 					<!-- <div class="col-sm-12"> -->
-						<input type="text" class="form-control price">
-						<label class="input-group-addon" style="padding: 9px 24px 9px 13px; position:absolute; left:352px; ">Ԫ</label>
-						<!-- <label for="yuan"><span class="input-group-addon">Ԫ</span></label> -->
+						<input type="text" name="price" class="form-control price">
+						<label class="input-group-addon" style="padding: 9px 24px 9px 13px; position:absolute; left:352px; ">元</label>
+						<!-- <label for="yuan"><span class="input-group-addon">元</span></label> -->
 					<!-- </div> -->
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="contact" class="control-label col-sm-2">����</label>
+				<label for="contact" class="control-label col-sm-2">姓名</label>
 				<div class="col-sm-10">
 					<input type="text" class="form-control" name="user.name" value="${sessionScope.user.name}">
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="tel" class="control-label col-sm-2">�绰</label>
+				<label for="tel" class="control-label col-sm-2">电话</label>
 				<div class="col-sm-10">
 					<input type="tel" class="form-control" name="user.telephone" value="${sessionScope.user.telephone}">
 				</div>
 			</div>
-			<!-- Ժϵѡ�񣬶�ѡ��select����multiple,ȥ�����ǵ�ѡ -->
+			<!-- 院系选择，多选在select增加multiple,去掉后是单选 -->
 			<div class="form-group">
-				<label for="department" class="control-label col-sm-2">Ŀ¼</label>
+				<label for="department" class="control-label col-sm-2">目录</label>
 				<div class="col-sm-10 ">
 					<select name="categories[0].id" id="department" class="form-control " onchange="chooseMajor()" >
-						<option value="selected">ѡ��Ŀ¼</option>
-						<option value="1">�鼮</option>
-						<option value="11">---�����</option>
-						<option value="12">---����</option>
-						<option value="13">---����</option>
-						<option value="2">������Ʒ</option>
+						<option value="selected">选择目录</option>
+						<option value="1">书籍</option>
+						<option value="11">---计算机</option>
+						<option value="12">---考研</option>
+						<option value="13">---出国</option>
+						<option value="2">生活用品</option>
 						</option>
 					</select>
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="contact" class="control-label col-sm-2">�ϴ�ͼƬ</label>
+				<label for="contact" class="control-label col-sm-2">上传图片</label>
 				<div class="col-sm-10">
 					<input type="file" class="form-control" name="uploadFile">
 				</div>
 			</div>
-			<input type="submit" value="�ύ" class="btn btn-primary btn-block" >
+			<input type="submit" value="提交" class="btn btn-primary btn-block" >
 		</form>
 	</div>
 </body>

@@ -38,12 +38,14 @@ public class UserAction extends AbstractAction implements ServletRequestAware , 
 	}
 	
 	
+	
+	
+	
 	@Action(value="login" , results={
 			@Result(location="${redirectUrl}" , type="redirect"),
 			@Result(name = "FAILURE" ,location="/user/login.jsp")
 	})
 	public String check() {
-System.out.println("--------second?----");
 		if(redirectUrl == null) {
 			redirectUrl = "/good/listAll?id=1";
 		}

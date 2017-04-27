@@ -18,6 +18,7 @@ import org.apache.struts2.convention.annotation.Result;
 import com.es.service.GoodService;
 import com.es.vo.CategoryInfo;
 import com.es.vo.GoodInfo;
+import com.es.vo.UserInfo;
 import com.opensymphony.xwork2.ActionContext;
 
 @Namespace("/good")
@@ -51,7 +52,6 @@ public class GoodAction extends AbstractAction {
 
 	@Action(value = "listAll", results = { @Result(location = "content.jsp", type = "dispatcher") })
 	public String listAll() {
-System.out.println("actionproxy  " + ActionContext.getContext().getActionInvocation().getProxy().getClass() + "  actioncontext" + ActionContext.getContext() + " Thead " + Thread.currentThread().getName());
 		CategoryInfo c = new CategoryInfo();
 		c.setId(good.getId());
 		List<CategoryInfo> cs = new ArrayList<CategoryInfo>();
@@ -61,7 +61,6 @@ System.out.println("actionproxy  " + ActionContext.getContext().getActionInvocat
 		goodNum = goodService.countGood(good);
 		setPageNum();
 		goods = goodService.findAll(good, page);
-System.out.println("page " + page + " " + goods.size());
 		return this.SUCCESS;
 	}
 
@@ -84,6 +83,8 @@ System.out.println("page " + page + " " + goods.size());
 			return "FAILURE";
 		}
 		receiveFile();
+	
+		good.setUser((UserInfo) session.get("user"));
 		good.setImgSrc(this.uploadFileFileName);
 		goodService.create(good);
 		return this.SUCCESS;
@@ -100,7 +101,6 @@ System.out.println("page " + page + " " + goods.size());
 //		realPath += dateTime;
 		String suffix = this.uploadFileFileName.substring(this.uploadFileFileName.lastIndexOf("."));
 		uploadFileFileName = dateTime+suffix;
-System.out.println(this.uploadFileFileName);
 
 		// øÿ÷∆Õº∆¨¿‡–Õ
 		if (uploadFileContentType.equals("image/gif")

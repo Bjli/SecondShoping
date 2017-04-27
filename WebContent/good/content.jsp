@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html;charset=GB18030"
-	pageEncoding="GB18030"%>
+<%@ page language="java" contentType="text/html;charset=utf-8"
+	pageEncoding="utf-8"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -13,7 +13,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>¶şÊÖĞÅÏ¢·¢²¼Æ½Ì¨</title>
+<title>äºŒæ‰‹ä¿¡æ¯å‘å¸ƒå¹³å°</title>
 <link rel="stylesheet" href="..\static\css\bootstrap.min.css">
 <script src="..\static\\js\jquery-1.11.2.js"></script>
 <script src="..\static\js\bootstrap.min.js"></script>
@@ -141,52 +141,52 @@ label {
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="navbar-header">
-			<a href="listAll?id=1" class="navbar-brand">¶şÊÖÉÌÆ·</a>
+			<a href="listAll?id=1" class="navbar-brand">äºŒæ‰‹å•†å“</a>
 		</div>
 		<div>
 			<ul class="nav navbar-nav">
 				<li class="dropdown"><a href="listAll?id=1" class="dropdown-toggle"
-					data-toggle="dropdown">¾ÉÊé<b class="caret"></b>
+					data-toggle="dropdown">æ—§ä¹¦<b class="caret"></b>
 				</a>
 					<ul class="dropdown-menu">
-						<li><a href="listAll?id=11">¼ÆËã»ú</a></li>
-						<li><a href="listAll?id=12">¿¼ÑĞ</a></li>
-						<li><a href="listAll?id=13">³ö¹ú</a></li>
+						<li><a href="listAll?id=11">è®¡ç®—æœº</a></li>
+						<li><a href="listAll?id=12">è€ƒç ”</a></li>
+						<li><a href="listAll?id=13">å‡ºå›½</a></li>
 					</ul></li>
 				<li class="dropdown"><a href="listAll?id=2" class="dropdown-toggle"
-					data-toggle="dropdown">Éú»îÓÃÆ·<b class="caret"></b>
+					data-toggle="dropdown">ç”Ÿæ´»ç”¨å“<b class="caret"></b>
 				</a>
 					<ul class="dropdown-menu">
-						<li><a href="listAll?id=21">ÒÂ·ş</a></li>
-						<li><a href="listAll?id=22">»¯×±Æ·</a></li>
-						<li><a href="listAll?id=23">ÔÓ»õ</a></li>
+						<li><a href="listAll?id=21">è¡£æœ</a></li>
+						<li><a href="listAll?id=22">åŒ–å¦†å“</a></li>
+						<li><a href="listAll?id=23">æ‚è´§</a></li>
 					</ul></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">µç×Ó²úÆ·<b class="caret"></b>
+					data-toggle="dropdown">ç”µå­äº§å“<b class="caret"></b>
 				</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">µçÄÔ</a></li>
-						<li><a href="#">ÊÖ»ú/ipad</a></li>
-						<li><a href="#">ÌêĞëµ¶</a></li>
+						<li><a href="#">ç”µè„‘</a></li>
+						<li><a href="#">æ‰‹æœº/ipad</a></li>
+						<li><a href="#">å‰ƒé¡»åˆ€</a></li>
 					</ul></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">¼Ò¾ÓÓÃÆ· </a></li>
+					data-toggle="dropdown">å®¶å±…ç”¨å“ </a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">µçÄÔÅä¼ş </a></li>
+					data-toggle="dropdown">ç”µè„‘é…ä»¶ </a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">Ó°ÊÓÓÎÏ· </a></li>
+					data-toggle="dropdown">å½±è§†æ¸¸æˆ </a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">ÆäËû </a></li>
+					data-toggle="dropdown">å…¶ä»– </a></li>
 			</ul>
-			<!-- <a href="#Login" data-toggle="modal" class="signin">µÇÂ¼</a> -->
+			<!-- <a href="#Login" data-toggle="modal" class="signin">ç™»å½•</a> -->
 			<div class="pull-right">
 				<c:choose>
 					<c:when test="${sessionScope.user == null}">
-						<a href="<%=basePath %>user/register.jsp" class="signin">×¢²á</a>
-						<a href="<%=basePath %>user/login" class="signin" >µÇÂ¼</a> 
+						<a href="<%=basePath %>user/register.jsp" class="signin">æ³¨å†Œ</a>
+						<a href="<%=basePath %>user/login" class="signin" >ç™»å½•</a> 
 					</c:when>
 					<c:otherwise>
-						<a href="<%=basePath %>user/logout" class="signin">×¢Ïú</a>
+						<a href="<%=basePath %>user/logout" class="signin">æ³¨é”€</a>
 						<a href="javascript:void(0)" class="signin" style="color:red">${sessionScope.user.name}</a>
 					</c:otherwise>
 				</c:choose>
@@ -198,16 +198,16 @@ label {
 		<div class="row">
 			<div class="body_left col-md-2" style="background-color:#eee">
 				<div class="panel panel-info">
-					<p class="text-center lead" style="font-weight:bolder ">Äã¿ÉÒÔÔÚÕâÀï·¢²¼ÏĞÖÃµÄ¶şÊÖĞÅÏ¢</p>
-					<p class="text-muted text-center lead" style="font-weight:bold">µã»÷ÏÂÃæµÄ°´Å¥³¢ÊÔÒ»ÏÂ</p>
+					<p class="text-center lead" style="font-weight:bolder ">ä½ å¯ä»¥åœ¨è¿™é‡Œå‘å¸ƒé—²ç½®çš„äºŒæ‰‹ä¿¡æ¯</p>
+					<p class="text-muted text-center lead" style="font-weight:bold">ç‚¹å‡»ä¸‹é¢çš„æŒ‰é’®å°è¯•ä¸€ä¸‹</p>
 					<c:choose>
 						<c:when test="${sessionScope.user == null}">
 							<button class="btn btn-info btn-block btn-lg"
-							onclick="javascript:window.location.href='<%=basePath%>user/login?redirectUrl=<%=basePath%>good/publish.jsp'">·¢²¼</button>
+							onclick="javascript:window.location.href='<%=basePath%>user/login?redirectUrl=<%=basePath%>good/publish.jsp'">å‘å¸ƒ</button>
 						</c:when>
 						<c:otherwise>
 							<button class="btn btn-info btn-block btn-lg"
-							onclick="javascript:window.location.href='<%=basePath%>good/publish.jsp'">·¢²¼</button>
+							onclick="javascript:window.location.href='<%=basePath%>good/publish.jsp'">å‘å¸ƒ</button>
 						</c:otherwise>
 					</c:choose>	
 				</div>
@@ -225,13 +225,13 @@ label {
 								<c:choose>
 									<c:when test="${sessionScope.user == null}">
 										<button class="btn btn-info btn-detail"
-										onclick="location='<%=basePath %>user/login?redirectUrl=<%=basePath %>good/detail?id=${g.id}'">ÏêÇé</button>
-										<button class="btn btn-primary btn-detail pull-left" disabled>ÊÕ²Ø</button>
+										onclick="location='<%=basePath %>user/login?redirectUrl=<%=basePath %>good/detail?id=${g.id}'">è¯¦æƒ…</button>
+										<button class="btn btn-primary btn-detail pull-left" disabled>æ”¶è—</button>
 									</c:when>
 									<c:otherwise>
 										<button class="btn btn-info btn-detail"
-										onclick="location='<%=basePath %>good/detail?id=${g.id}'">ÏêÇé</button>
-										<button class="btn btn-primary btn-detail pull-left" disabled>ÊÕ²Ø</button>
+										onclick="location='<%=basePath %>good/detail?id=${g.id}'">è¯¦æƒ…</button>
+										<button class="btn btn-primary btn-detail pull-left" disabled>æ”¶è—</button>
 									</c:otherwise>
 								</c:choose>	
 							</div>
@@ -263,8 +263,8 @@ label {
 		</div>
 		</c:if>
 		<div class="col-lg-offset-7">
-			<p>µÚ${page}Ò³</p>
-			<p>¹²${pageNum}Ò³</p>
+			<p>ç¬¬${page}é¡µ</p>
+			<p>å…±${pageNum}é¡µ</p>
 		</div>
 	</div>
 </body>

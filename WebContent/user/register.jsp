@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html;charset=GB18030" pageEncoding="GB18030"%>
+<%@ page language="java" contentType="text/html;charset=utf-8" pageEncoding="utf-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>注册</title>
+	<title>娉ㄥ唽</title>
 	<link rel="stylesheet" href="..\static\css\bootstrap.min.css">
 	<script src="..\static\js\jquery-1.11.2.js"></script>
 	<script src="..\static\js\bootstrap.min.js"></script>
@@ -29,38 +29,38 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body>
 	<div class="container">
 		<form action="<%=basePath%>user/register" class="form-horizontal">
-			<h2>注册</h2>
+			<h2>娉ㄥ唽</h2>
 			<div class="form-group">
-				<label for="email" class="control-label col-sm-2">邮箱</label>
+				<label for="email" class="control-label col-sm-2">閭</label>
 				<div class="col-sm-10">
 					<input type="email" name="email" class="form-control" placeholder="Email Address" required autofocus>
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="nickname" class="control-label col-sm-2">昵称</label>
+				<label for="nickname" class="control-label col-sm-2">鏄电О</label>
 				<div class="col-sm-10">
 					<input type="text" class="form-control" name="name" placeholder="Choose a smart nickname for you">
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="psw" class="control-label col-sm-2">密码</label>
+				<label for="psw" class="control-label col-sm-2">瀵嗙爜</label>
 				<div class="col-sm-10">
 					<input type="password" name = "password" class="form-control" placeholder="Password" required>
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="psw2" class="control-label col-sm-2">确认</label>
+				<label for="psw2" class="control-label col-sm-2">纭</label>
 				<div class="col-sm-10">
 					<input type="password" class="form-control" placeholder="Confirm Password" required>
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="tel" class="control-label col-sm-2">电话</label>
+				<label for="tel" class="control-label col-sm-2">鐢佃瘽</label>
 				<div class="col-sm-10">
 					<input type="tel"  name= "telephone" class="form-control" required>
 				</div>
 			</div>	
-			<button class="btn btn-success btn-block submit">注册</button>					
+			<button class="btn btn-success btn-block submit">娉ㄥ唽</button>					
 			<!-- <input type="submit" class="btn btn-success btn-block" value="submit"> -->
 		</form>
 	</div>

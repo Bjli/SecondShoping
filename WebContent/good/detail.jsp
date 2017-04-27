@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html;charset=GB18030"
-	pageEncoding="GB18030"%>
+<%@ page language="java" contentType="text/html;charset=utf-8"
+	pageEncoding="utf-8"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -12,7 +12,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>¶þÊÖÊéÐÅÏ¢·¢²¼Æ½Ì¨</title>
+<title>äºŒæ‰‹ä¹¦ä¿¡æ¯å‘å¸ƒå¹³å°</title>
 <link rel="stylesheet" href="..\static\css\bootstrap.min.css">
 <script src="..\static\js\jquery-1.11.2.js"></script>
 <script src="..\static\js\bootstrap.min.js"></script>
@@ -142,53 +142,53 @@ label {
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="navbar-header">
-			<a href="listAll?id=1" class="navbar-brand">¶þÊÖÉÌÆ·</a>
+			<a href="listAll?id=1" class="navbar-brand">äºŒæ‰‹å•†å“</a>
 		</div>
 		<div>
 			<ul class="nav navbar-nav">
 				<li class="dropdown"><a href="listAll?id=1"
-					class="dropdown-toggle" data-toggle="dropdown">¾ÉÊé<b
+					class="dropdown-toggle" data-toggle="dropdown">æ—§ä¹¦<b
 						class="caret"></b>
 				</a>
 					<ul class="dropdown-menu">
-						<li><a href="listAll?id=11">¼ÆËã»ú</a></li>
-						<li><a href="listAll?id=12">¿¼ÑÐ</a></li>
-						<li><a href="listAll?id=13">³ö¹ú</a></li>
+						<li><a href="listAll?id=11">è®¡ç®—æœº</a></li>
+						<li><a href="listAll?id=12">è€ƒç ”</a></li>
+						<li><a href="listAll?id=13">å‡ºå›½</a></li>
 					</ul></li>
 				<li class="dropdown"><a href="listAll?id=2"
-					class="dropdown-toggle" data-toggle="dropdown">Éú»îÓÃÆ·<b
+					class="dropdown-toggle" data-toggle="dropdown">ç”Ÿæ´»ç”¨å“<b
 						class="caret"></b>
 				</a>
 					<ul class="dropdown-menu">
-						<li><a href="listAll?id=21">ÒÂ·þ</a></li>
-						<li><a href="listAll?id=22">»¯×±Æ·</a></li>
-						<li><a href="listAll?id=23">ÔÓ»õ</a></li>
+						<li><a href="listAll?id=21">è¡£æœ</a></li>
+						<li><a href="listAll?id=22">åŒ–å¦†å“</a></li>
+						<li><a href="listAll?id=23">æ‚è´§</a></li>
 					</ul></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">µç×Ó²úÆ·<b class="caret"></b>
+					data-toggle="dropdown">ç”µå­äº§å“<b class="caret"></b>
 				</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">µçÄÔ</a></li>
-						<li><a href="#">ÊÖ»ú/ipad</a></li>
-						<li><a href="#">ÌêÐëµ¶</a></li>
+						<li><a href="#">ç”µè„‘</a></li>
+						<li><a href="#">æ‰‹æœº/ipad</a></li>
+						<li><a href="#">å‰ƒé¡»åˆ€</a></li>
 					</ul></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">¼Ò¾ÓÓÃÆ· </a></li>
+					data-toggle="dropdown">å®¶å±…ç”¨å“ </a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">µçÄÔÅä¼þ </a></li>
+					data-toggle="dropdown">ç”µè„‘é…ä»¶ </a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">Ó°ÊÓÓÎÏ· </a></li>
+					data-toggle="dropdown">å½±è§†æ¸¸æˆ </a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">ÆäËû </a></li>
+					data-toggle="dropdown">å…¶ä»– </a></li>
 			</ul>
 			<div class="pull-right">
 				<c:choose>
 					<c:when test="${sessionScope.user == null}">
-						<a href="<%=basePath %>user/register.jsp" class="signin">×¢²á</a>
-						<a href="<%=basePath %>user/login.jsp" class="signin" >µÇÂ¼</a> 
+						<a href="<%=basePath %>user/register.jsp" class="signin">æ³¨å†Œ</a>
+						<a href="<%=basePath %>user/login.jsp" class="signin" >ç™»å½•</a> 
 					</c:when>
 					<c:otherwise>
-						<a href="<%=basePath %>user/logout" class="signin">×¢Ïú</a>
+						<a href="<%=basePath %>user/logout" class="signin">æ³¨é”€</a>
 						<a href="javascript:void(0)" class="signin" style="color:red">${sessionScope.user.name}</a>
 					</c:otherwise>
 				</c:choose>
@@ -201,38 +201,38 @@ label {
 			<div class="col-md-4">
 				<div class="panel panel-success">
 					<div class="panel-heading">
-						<h3 class="panel-title text-center lead">·âÃæ</h3>
+						<h3 class="panel-title text-center lead">å°é¢</h3>
 					</div>
 					<div class="panel-body" align="center">
-						<img src="../static/image/${good.imgSrc}" alt="Í¨ÓÃµÄÕ¼Î»·ûËõÂÔÍ¼" height="256px" width="225px">
+						<img src="../static/image/${good.imgSrc}" alt="é€šç”¨çš„å ä½ç¬¦ç¼©ç•¥å›¾" height="256px" width="225px">
 					</div>
 				</div>
 			</div>
 			<div class="col-md-8">
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h3 class="panel-title text-center lead">¶þÊÖÐÅÏ¢ÏêÇé</h3>
+						<h3 class="panel-title text-center lead">äºŒæ‰‹ä¿¡æ¯è¯¦æƒ…</h3>
 					</div>
 					<table class="table table-hover table-bordered"
 						style="tableLayout:fixed; margin-top:14px; margin-bottom:14px">
 						<tr class="text-center">
-							<td>Ãû³Æ</td>
+							<td>åç§°</td>
 							<td>${good.name}</td>
 						</tr>
 						<tr class="text-center">
-							<td width="25%">¼ò½é</td>
+							<td width="25%">ç®€ä»‹</td>
 							<td width="75%">${good.detail}</td>
 						</tr>
 						<tr class="text-center">
-							<td>¼Û¸ñ</td>
+							<td>ä»·æ ¼</td>
 							<td>${good.price }</td>
 						</tr>
 						<tr class="text-center">
-							<td>Âô¼Ò</td>
+							<td>å–å®¶</td>
 							<td>${good.user.name }</td>
 						</tr>
 						<tr class="text-center">
-							<td>µç»°</td>
+							<td>ç”µè¯</td>
 							<td>${good.user.telephone }</td>
 						</tr>
 						<tr class="text-center">

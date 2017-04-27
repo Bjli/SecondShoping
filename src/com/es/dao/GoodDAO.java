@@ -24,7 +24,7 @@ public class GoodDAO {
 		String sql = "select * from good join good_category on good.id = good_category.good_id"
 				+ " where good_category.category_id = " + good.getId() + " or floor(good_category.category_id / 10) ="
 				+good.getId()+ " order by good.create_time desc" +  " limit "+ (page-1)*GoodAction.PAGE_SIZE  +","+ GoodAction.PAGE_SIZE +";";
-System.out.println(sql);
+
 		PreparedStatement ps = DB.prepare(conn, sql);
 		List<Good> goods = new ArrayList<Good>();
 		try {
