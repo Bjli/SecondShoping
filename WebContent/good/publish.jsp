@@ -119,12 +119,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<label for="department" class="control-label col-sm-2">目录</label>
 				<div class="col-sm-10 ">
 					<select name="categories[0].id" id="department" class="form-control " onchange="chooseMajor()" >
-						<option value="selected">选择目录</option>
+						<option value="selected">选择目录（请分类至二级菜单）</option>
 						<option value="1">书籍</option>
-						<option value="11">---计算机</option>
-						<option value="12">---考研</option>
-						<option value="13">---出国</option>
+						<option value="11">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------计算机</option>
+						<option value="12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------考研</option>
+						<option value="13">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------出国</option>
+						<option value="14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------其他</option>
 						<option value="2">生活用品</option>
+						<option value="21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------衣服</option>
+						<option value="22">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------化妆品</option>
+						<option value="23">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------杂货</option>
+						<option value="3">电子产品</option>
+						<option value="31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------电脑周边</option>
+						<option value="32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------手机数码</option>
+						<option value="33">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------其他</option>
+						<option value="4">其他</option>
+						<option value="41">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------未知领域</option>
+					
 						</option>
 					</select>
 				</div>

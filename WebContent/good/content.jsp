@@ -161,22 +161,21 @@ label {
 						<li><a href="listAll?id=22">化妆品</a></li>
 						<li><a href="listAll?id=23">杂货</a></li>
 					</ul></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
+				<li class="dropdown"><a href="listAll?id=3" class="dropdown-toggle"
 					data-toggle="dropdown">电子产品<b class="caret"></b>
 				</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">电脑</a></li>
-						<li><a href="#">手机/ipad</a></li>
-						<li><a href="#">剃须刀</a></li>
+						<li><a href="listAll?id=31">电脑周边</a></li>
+						<li><a href="listAll?id=32">手机数码/ipad</a></li>
+						<li><a href="listAll?id=33">其他</a></li>
 					</ul></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">家居用品 </a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">电脑配件 </a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">影视游戏 </a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">其他 </a></li>
+	
+				<li class="dropdown"><a href="listAll?id=4" class="dropdown-toggle"
+					data-toggle="dropdown">其他 <b class="caret"></b>
+					</a>
+										<ul class="dropdown-menu">
+						<li><a href="listAll?id=41">未知领域</a></li>
+					</ul></li>
 			</ul>
 			<!-- <a href="#Login" data-toggle="modal" class="signin">登录</a> -->
 			<div class="pull-right">
@@ -216,8 +215,8 @@ label {
 				<div class="rowtest">
 					<c:forEach items="${goods}" var="g">
 						<div class="col-sm-6 col-md-3 book-thumbnail">
-							<div class="thumbnail">
-								<img class="thumbnail" src="../static/image/${g.imgSrc}">
+							<div class="panel-body" align="center">
+								<img class="thumbnail" src="../static/image/${g.imgSrc}" alt="通用的占位符缩略图" height="256px" width="180px" >
 							</div>
 							<div class="caption">
 								<h3 class="caption-detail">${g.name}</h3>

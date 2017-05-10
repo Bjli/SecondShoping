@@ -146,40 +146,37 @@ label {
 		</div>
 		<div>
 			<ul class="nav navbar-nav">
-				<li class="dropdown"><a href="listAll?id=1"
-					class="dropdown-toggle" data-toggle="dropdown">旧书<b
-						class="caret"></b>
+				<li class="dropdown"><a href="listAll?id=1" class="dropdown-toggle"
+					data-toggle="dropdown">旧书<b class="caret"></b>
 				</a>
 					<ul class="dropdown-menu">
 						<li><a href="listAll?id=11">计算机</a></li>
 						<li><a href="listAll?id=12">考研</a></li>
 						<li><a href="listAll?id=13">出国</a></li>
 					</ul></li>
-				<li class="dropdown"><a href="listAll?id=2"
-					class="dropdown-toggle" data-toggle="dropdown">生活用品<b
-						class="caret"></b>
+				<li class="dropdown"><a href="listAll?id=2" class="dropdown-toggle"
+					data-toggle="dropdown">生活用品<b class="caret"></b>
 				</a>
 					<ul class="dropdown-menu">
 						<li><a href="listAll?id=21">衣服</a></li>
 						<li><a href="listAll?id=22">化妆品</a></li>
 						<li><a href="listAll?id=23">杂货</a></li>
 					</ul></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
+				<li class="dropdown"><a href="listAll?id=3" class="dropdown-toggle"
 					data-toggle="dropdown">电子产品<b class="caret"></b>
 				</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">电脑</a></li>
-						<li><a href="#">手机/ipad</a></li>
-						<li><a href="#">剃须刀</a></li>
+						<li><a href="listAll?id=31">电脑周边</a></li>
+						<li><a href="listAll?id=32">手机数码/ipad</a></li>
+						<li><a href="listAll?id=33">其他</a></li>
 					</ul></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">家居用品 </a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">电脑配件 </a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">影视游戏 </a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">其他 </a></li>
+	
+				<li class="dropdown"><a href="listAll?id=4" class="dropdown-toggle"
+					data-toggle="dropdown">其他 <b class="caret"></b>
+					</a>
+										<ul class="dropdown-menu">
+						<li><a href="listAll?id=41">未知领域</a></li>
+					</ul></li>
 			</ul>
 			<div class="pull-right">
 				<c:choose>
