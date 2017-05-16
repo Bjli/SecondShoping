@@ -152,6 +152,7 @@ label {
 						<li><a href="listAll?id=11">计算机</a></li>
 						<li><a href="listAll?id=12">考研</a></li>
 						<li><a href="listAll?id=13">出国</a></li>
+						<li><a href="listAll?id=14">其他</a></li>
 					</ul></li>
 				<li class="dropdown"><a href="listAll?id=2" class="dropdown-toggle"
 					data-toggle="dropdown">生活用品<b class="caret"></b>
@@ -186,7 +187,7 @@ label {
 					</c:when>
 					<c:otherwise>
 						<a href="<%=basePath %>user/logout" class="signin">注销</a>
-						<a href="javascript:void(0)" class="signin" style="color:red">${sessionScope.user.name}</a>
+						<a href="javascript:void(0)" class="signin" style="color:white">${sessionScope.user.name}</a>
 					</c:otherwise>
 				</c:choose>
 			</div>

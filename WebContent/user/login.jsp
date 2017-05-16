@@ -50,9 +50,11 @@ button {
 		          <label>
 		            <input type="checkbox" value="true" name="autoLogin"> 自动登录
 		          </label>
+		          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a herf="#">忘记密码？</a>
         	</div>
+        	
 			<button class="btn btn-success submit">登录</button>
-			<button class="btn btn-default">忘记密码？</button>
+			<button class="btn btn-default" type="reset">重置</button>
 		</form>
 	</div>
 </body>

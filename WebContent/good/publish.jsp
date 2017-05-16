@@ -69,6 +69,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		text-align:center;
 		font-weight:bold;
 	}
+	.pad{
+	   margin-top:50px;
+	}
 	.keyword{padding:0px;}
 	.price.form-control{padding:0px; width:337px; margin-left:15px; margin-right:15px; position:relative;}
 	/*.input-group-addon{position:absolute; left:336px;}*/
@@ -76,6 +79,49 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</style>
 </head>
 <body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="navbar-header">
+			<a href="listAll?id=1" class="navbar-brand">二手商品</a>
+		</div>
+		<div>
+			<ul class="nav navbar-nav">
+				<li class="dropdown"><a href="listAll?id=1" class="dropdown-toggle"
+					data-toggle="dropdown">旧书<b class="caret"></b>
+				</a>
+					<ul class="dropdown-menu">
+						<li><a href="listAll?id=11">计算机</a></li>
+						<li><a href="listAll?id=12">考研</a></li>
+						<li><a href="listAll?id=13">出国</a></li>
+						<li><a href="listAll?id=14">其他</a></li>
+					</ul></li>
+				<li class="dropdown"><a href="listAll?id=2" class="dropdown-toggle"
+					data-toggle="dropdown">生活用品<b class="caret"></b>
+				</a>
+					<ul class="dropdown-menu">
+						<li><a href="listAll?id=21">衣服</a></li>
+						<li><a href="listAll?id=22">化妆品</a></li>
+						<li><a href="listAll?id=23">杂货</a></li>
+					</ul></li>
+				<li class="dropdown"><a href="listAll?id=3" class="dropdown-toggle"
+					data-toggle="dropdown">电子产品<b class="caret"></b>
+				</a>
+					<ul class="dropdown-menu">
+						<li><a href="listAll?id=31">电脑周边</a></li>
+						<li><a href="listAll?id=32">手机数码/ipad</a></li>
+						<li><a href="listAll?id=33">其他</a></li>
+					</ul></li>
+	
+				<li class="dropdown"><a href="listAll?id=4" class="dropdown-toggle"
+					data-toggle="dropdown">其他 <b class="caret"></b>
+					</a>
+										<ul class="dropdown-menu">
+						<li><a href="listAll?id=41">未知领域</a></li>
+					</ul></li>
+			</ul>
+			</div>
+			</nav>
+			<div class="pad">
+			</div>
 	<div class="container">
 		<form action="<%=basePath%>good/publish" class="form-horizontal" name="form1" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="user.id" value="1"/>
@@ -135,7 +181,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<option value="33">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------其他</option>
 						<option value="4">其他</option>
 						<option value="41">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------未知领域</option>
-					
 						</option>
 					</select>
 				</div>

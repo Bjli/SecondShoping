@@ -186,7 +186,7 @@ label {
 					</c:when>
 					<c:otherwise>
 						<a href="<%=basePath %>user/logout" class="signin">注销</a>
-						<a href="javascript:void(0)" class="signin" style="color:red">${sessionScope.user.name}</a>
+						<a href="javascript:void(0)" class="signin" style="color:white">${sessionScope.user.name}</a>
 					</c:otherwise>
 				</c:choose>
 			</div>

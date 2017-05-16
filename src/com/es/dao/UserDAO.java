@@ -43,7 +43,7 @@ public class UserDAO {
 			ps.setString(1, user.getName());
 			ps.setString(2, user.getEmail());
 			ps.setString(3, user.getPassword());
-			ps.setString(4, user.getPassword());
+			ps.setString(4, user.getTelephone());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
